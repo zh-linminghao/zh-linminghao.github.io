@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zh-linminghao.github.io</id>
     <title>Gridea</title>
-    <updated>2021-03-10T09:13:26.723Z</updated>
+    <updated>2021-03-10T09:16:54.618Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zh-linminghao.github.io"/>
     <link rel="self" href="https://zh-linminghao.github.io/atom.xml"/>
@@ -10,6 +10,72 @@
     <logo>https://zh-linminghao.github.io/images/avatar.png</logo>
     <icon>https://zh-linminghao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[Git 使用之命令行篇]]></title>
+        <id>https://zh-linminghao.github.io/post/git-shi-yong-zhi-ming-ling-xing-pian/</id>
+        <link href="https://zh-linminghao.github.io/post/git-shi-yong-zhi-ming-ling-xing-pian/">
+        </link>
+        <updated>2021-03-10T09:14:07.000Z</updated>
+        <content type="html"><![CDATA[<p>#git提交文件</p>
+<p>添加文件：git add 文件名git add -A 一键add<br>
+提交文件:git commit -m &quot;提交文件时的说明&quot;<br>
+推送到远程仓库:普通推送: git push强行推送: git push -u origin master -f<br>
+一、本地操作：</p>
+<p>1.其它</p>
+<p>git init：初始化本地库</p>
+<p>git status：查看工作区、暂存区的状态</p>
+<p>git add ：将工作区的“新建/修改”添加到暂存区</p>
+<p>git rm --cached ：移除暂存区的修改</p>
+<p>git commit ：将暂存区的内容提交到本地库</p>
+<p>tip：需要再编辑提交日志，比较麻烦，建议用下面带参数的提交方法</p>
+<p>git commit -m &quot;提交日志&quot; ：文件从暂存区到本地库</p>
+<p>2.日志</p>
+<p>git log：查看历史提交</p>
+<p>tip：空格向下翻页，b向上翻页，q退出</p>
+<p>git log --pretty=oneline：以漂亮的一行显示，包含全部哈希索引值</p>
+<p>git log --oneline：以简洁的一行显示，包含简洁哈希索引值</p>
+<p>git reflog：以简洁的一行显示，包含简洁哈希索引值，同时显示移动到某个历史版本所需的步数</p>
+<p>3.版本控制</p>
+<p>git reset --hard 简洁/完整哈希索引值：回到指定哈希值所对应的版本</p>
+<p>git reset --hard HEAD：强制工作区、暂存区、本地库为当前HEAD指针所在的版本</p>
+<p>git reset --hard HEAD^：后退一个版本</p>
+<p>tip：一个^表示回退一个版本</p>
+<p>git reset --hard HEAD~1：后退一个版本</p>
+<p>tip：波浪线~后面的数字表示后退几个版本</p>
+<p>4.比较差异</p>
+<p>git diff：比较工作区和暂存区的所有文件差异</p>
+<p>git diff ：比较工作区和暂存区的指定文件的差异</p>
+<p>git diff HEAD|HEAD^|HEAD~|哈希索引值 ：比较工作区跟本地库的某个版本的指定文件的差异</p>
+<p>5.分支操作</p>
+<p>git branch -v：查看所有分支</p>
+<p>git branch -d &lt;分支名&gt;：删除本地分支</p>
+<p>git branch &lt;分支名&gt;：新建分支</p>
+<p>git checkout &lt;分支名&gt;：切换分支</p>
+<p>git merge &lt;被合并分支名&gt;：合并分支</p>
+<p>tip：如master分支合并 hot_fix分支，那么当前必须处于master分支上，然后执行 git merge hot_fix 命令</p>
+<p>tip2：合并出现冲突</p>
+<p>①删除git自动标记符号，如&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD、&gt;&gt;&gt;&gt;&gt;&gt;&gt;等</p>
+<p>②修改到满意后，保存退出</p>
+<p>③git add</p>
+<p>④git commit -m &quot;日志信息&quot;，此时后面不要带文件名</p>
+<p>二、本地库跟远程库交互：</p>
+<p>git clone &lt;远程库地址&gt;：克隆远程库</p>
+<p>功能：①完整的克隆远程库为本地库，②为本地库新建origin别名，③初始化本地库</p>
+<p>git remote -v：查看远程库地址别名</p>
+<p>git remote add &lt;别名&gt; &lt;远程库地址&gt;：新建远程库地址别名</p>
+<p>git remote rm &lt;别名&gt;：删除本地中远程库别名</p>
+<p>git push &lt;别名&gt; &lt;分支名&gt;：本地库某个分支推送到远程库，分支必须指定</p>
+<p>git pull &lt;别名&gt; &lt;分支名&gt;：把远程库的修改拉取到本地</p>
+<p>tip：该命令包括git fetch，git merge</p>
+<p>git fetch &lt;远程库别名&gt; &lt;远程库分支名&gt;：抓取远程库的指定分支到本地，但没有合并</p>
+<p>git merge &lt;远程库别名/远程库分支名&gt;：将抓取下来的远程的分支，跟当前所在分支进行合并</p>
+<p>git fork：复制远程库</p>
+<p>tip：一般是外面团队的开发人员fork本团队项目，然后进行开发，之后外面团队发起pull request，然后本团队进行审核，如无问题本团队进行merge（合并）到团队自己的远程库，整个流程就是本团队跟外面团队的协同开发流程，Linux的团队开发成员即为这种工作方式。</p>
+<p>三、创建git<br>
+git remote add origin https://github.com/zhousanfudigital_monitoring_liunx.git<br>
+git push origin master</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://zh-linminghao.github.io/post/hello-gridea/</id>

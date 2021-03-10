@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
-<title>关于 | Gridea</title>
+<title>Git 使用之命令行篇 | Gridea</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1615367809884">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,7 +38,7 @@
 
 
 
-  <meta name="description" content="关于" />
+  <meta name="description" content="Git 使用之命令行篇" />
   <meta name="keywords" content="" />
 </head>
 
@@ -190,8 +190,7 @@
       <div class="sidebar-body pisces" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -239,198 +238,6 @@
   </div>
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
           
         
       </div>
@@ -518,8 +325,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://zh-linminghao.github.io/post/about/">
-      关于
+    <a class="post-title-link" href="https://zh-linminghao.github.io/post/git-shi-yong-zhi-ming-ling-xing-pian/">
+      Git 使用之命令行篇
     </a>
   </h1>
   <div class="post-meta">
@@ -527,33 +334,116 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2019-01-25 19:09:48">2019-01-25</span>
+      <span class="publish-time" data-t="2021-03-10 17:14:07">2021-03-10</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
+      <span>4<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>31<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>986<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
+              <p>#git提交文件</p>
+<p>添加文件：git add 文件名git add -A 一键add<br>
+提交文件:git commit -m &quot;提交文件时的说明&quot;<br>
+推送到远程仓库:普通推送: git push强行推送: git push -u origin master -f<br>
+一、本地操作：</p>
+<p>1.其它</p>
+<p>git init：初始化本地库</p>
+<p>git status：查看工作区、暂存区的状态</p>
+<p>git add ：将工作区的“新建/修改”添加到暂存区</p>
+<p>git rm --cached ：移除暂存区的修改</p>
+<p>git commit ：将暂存区的内容提交到本地库</p>
+<p>tip：需要再编辑提交日志，比较麻烦，建议用下面带参数的提交方法</p>
+<p>git commit -m &quot;提交日志&quot; ：文件从暂存区到本地库</p>
+<p>2.日志</p>
+<p>git log：查看历史提交</p>
+<p>tip：空格向下翻页，b向上翻页，q退出</p>
+<p>git log --pretty=oneline：以漂亮的一行显示，包含全部哈希索引值</p>
+<p>git log --oneline：以简洁的一行显示，包含简洁哈希索引值</p>
+<p>git reflog：以简洁的一行显示，包含简洁哈希索引值，同时显示移动到某个历史版本所需的步数</p>
+<p>3.版本控制</p>
+<p>git reset --hard 简洁/完整哈希索引值：回到指定哈希值所对应的版本</p>
+<p>git reset --hard HEAD：强制工作区、暂存区、本地库为当前HEAD指针所在的版本</p>
+<p>git reset --hard HEAD^：后退一个版本</p>
+<p>tip：一个^表示回退一个版本</p>
+<p>git reset --hard HEAD~1：后退一个版本</p>
+<p>tip：波浪线~后面的数字表示后退几个版本</p>
+<p>4.比较差异</p>
+<p>git diff：比较工作区和暂存区的所有文件差异</p>
+<p>git diff ：比较工作区和暂存区的指定文件的差异</p>
+<p>git diff HEAD|HEAD^|HEAD~|哈希索引值 ：比较工作区跟本地库的某个版本的指定文件的差异</p>
+<p>5.分支操作</p>
+<p>git branch -v：查看所有分支</p>
+<p>git branch -d &lt;分支名&gt;：删除本地分支</p>
+<p>git branch &lt;分支名&gt;：新建分支</p>
+<p>git checkout &lt;分支名&gt;：切换分支</p>
+<p>git merge &lt;被合并分支名&gt;：合并分支</p>
+<p>tip：如master分支合并 hot_fix分支，那么当前必须处于master分支上，然后执行 git merge hot_fix 命令</p>
+<p>tip2：合并出现冲突</p>
+<p>①删除git自动标记符号，如&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD、&gt;&gt;&gt;&gt;&gt;&gt;&gt;等</p>
+<p>②修改到满意后，保存退出</p>
+<p>③git add</p>
+<p>④git commit -m &quot;日志信息&quot;，此时后面不要带文件名</p>
+<p>二、本地库跟远程库交互：</p>
+<p>git clone &lt;远程库地址&gt;：克隆远程库</p>
+<p>功能：①完整的克隆远程库为本地库，②为本地库新建origin别名，③初始化本地库</p>
+<p>git remote -v：查看远程库地址别名</p>
+<p>git remote add &lt;别名&gt; &lt;远程库地址&gt;：新建远程库地址别名</p>
+<p>git remote rm &lt;别名&gt;：删除本地中远程库别名</p>
+<p>git push &lt;别名&gt; &lt;分支名&gt;：本地库某个分支推送到远程库，分支必须指定</p>
+<p>git pull &lt;别名&gt; &lt;分支名&gt;：把远程库的修改拉取到本地</p>
+<p>tip：该命令包括git fetch，git merge</p>
+<p>git fetch &lt;远程库别名&gt; &lt;远程库分支名&gt;：抓取远程库的指定分支到本地，但没有合并</p>
+<p>git merge &lt;远程库别名/远程库分支名&gt;：将抓取下来的远程的分支，跟当前所在分支进行合并</p>
+<p>git fork：复制远程库</p>
+<p>tip：一般是外面团队的开发人员fork本团队项目，然后进行开发，之后外面团队发起pull request，然后本团队进行审核，如无问题本团队进行merge（合并）到团队自己的远程库，整个流程就是本团队跟外面团队的协同开发流程，Linux的团队开发成员即为这种工作方式。</p>
+<p>三、创建git<br>
+git remote add origin https://github.com/zhousanfudigital_monitoring_liunx.git<br>
+git push origin master</p>
 
             </div>
             
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      哈哈哈
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://zh-linminghao.github.io/post/git-shi-yong-zhi-ming-ling-xing-pian/" title="Git 使用之命令行篇">https://zh-linminghao.github.io/post/git-shi-yong-zhi-ming-ling-xing-pian/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="Hello Gridea" href="https://zh-linminghao.github.io/post/hello-gridea/">Hello Gridea</a>
+        <a class="nav-mobile-next" title="Hello Gridea" href="https://zh-linminghao.github.io/post/hello-gridea/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
             
             
   

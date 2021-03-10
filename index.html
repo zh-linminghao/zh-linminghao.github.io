@@ -9,7 +9,7 @@
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title>Gridea</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1615367588395">
+<link rel="shortcut icon" href="/favicon.ico?v=1615367809884">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -184,7 +184,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-count">2</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -239,6 +239,80 @@
         <div class="section-box pisces">
           <section class="section bg-color posts-expand slide-down-in">
             
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://zh-linminghao.github.io/post/git-shi-yong-zhi-ming-ling-xing-pian/">
+      Git 使用之命令行篇
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2021-03-10 17:14:07">2021-03-10</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>4<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>986<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</section>
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><p>#git提交文件</p>
+<p>添加文件：git add 文件名git add -A 一键add<br>
+提交文件:git commit -m &quot;提交文件时的说明&quot;<br>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://zh-linminghao.github.io/post/git-shi-yong-zhi-ming-ling-xing-pian/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
   <article class="post-list-box  post box-shadow-wrapper">
     <div class="article-wrapper bg-color">
       <section class="post-header">
@@ -1087,6 +1161,69 @@
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://zh-linminghao.github.io/post/git-shi-yong-zhi-ming-ling-xing-pian/"" data-c="
+          &lt;p&gt;#git提交文件&lt;/p&gt;
+&lt;p&gt;添加文件：git add 文件名git add -A 一键add&lt;br&gt;
+提交文件:git commit -m &amp;quot;提交文件时的说明&amp;quot;&lt;br&gt;
+推送到远程仓库:普通推送: git push强行推送: git push -u origin master -f&lt;br&gt;
+一、本地操作：&lt;/p&gt;
+&lt;p&gt;1.其它&lt;/p&gt;
+&lt;p&gt;git init：初始化本地库&lt;/p&gt;
+&lt;p&gt;git status：查看工作区、暂存区的状态&lt;/p&gt;
+&lt;p&gt;git add ：将工作区的“新建/修改”添加到暂存区&lt;/p&gt;
+&lt;p&gt;git rm --cached ：移除暂存区的修改&lt;/p&gt;
+&lt;p&gt;git commit ：将暂存区的内容提交到本地库&lt;/p&gt;
+&lt;p&gt;tip：需要再编辑提交日志，比较麻烦，建议用下面带参数的提交方法&lt;/p&gt;
+&lt;p&gt;git commit -m &amp;quot;提交日志&amp;quot; ：文件从暂存区到本地库&lt;/p&gt;
+&lt;p&gt;2.日志&lt;/p&gt;
+&lt;p&gt;git log：查看历史提交&lt;/p&gt;
+&lt;p&gt;tip：空格向下翻页，b向上翻页，q退出&lt;/p&gt;
+&lt;p&gt;git log --pretty=oneline：以漂亮的一行显示，包含全部哈希索引值&lt;/p&gt;
+&lt;p&gt;git log --oneline：以简洁的一行显示，包含简洁哈希索引值&lt;/p&gt;
+&lt;p&gt;git reflog：以简洁的一行显示，包含简洁哈希索引值，同时显示移动到某个历史版本所需的步数&lt;/p&gt;
+&lt;p&gt;3.版本控制&lt;/p&gt;
+&lt;p&gt;git reset --hard 简洁/完整哈希索引值：回到指定哈希值所对应的版本&lt;/p&gt;
+&lt;p&gt;git reset --hard HEAD：强制工作区、暂存区、本地库为当前HEAD指针所在的版本&lt;/p&gt;
+&lt;p&gt;git reset --hard HEAD^：后退一个版本&lt;/p&gt;
+&lt;p&gt;tip：一个^表示回退一个版本&lt;/p&gt;
+&lt;p&gt;git reset --hard HEAD~1：后退一个版本&lt;/p&gt;
+&lt;p&gt;tip：波浪线~后面的数字表示后退几个版本&lt;/p&gt;
+&lt;p&gt;4.比较差异&lt;/p&gt;
+&lt;p&gt;git diff：比较工作区和暂存区的所有文件差异&lt;/p&gt;
+&lt;p&gt;git diff ：比较工作区和暂存区的指定文件的差异&lt;/p&gt;
+&lt;p&gt;git diff HEAD|HEAD^|HEAD~|哈希索引值 ：比较工作区跟本地库的某个版本的指定文件的差异&lt;/p&gt;
+&lt;p&gt;5.分支操作&lt;/p&gt;
+&lt;p&gt;git branch -v：查看所有分支&lt;/p&gt;
+&lt;p&gt;git branch -d &amp;lt;分支名&amp;gt;：删除本地分支&lt;/p&gt;
+&lt;p&gt;git branch &amp;lt;分支名&amp;gt;：新建分支&lt;/p&gt;
+&lt;p&gt;git checkout &amp;lt;分支名&amp;gt;：切换分支&lt;/p&gt;
+&lt;p&gt;git merge &amp;lt;被合并分支名&amp;gt;：合并分支&lt;/p&gt;
+&lt;p&gt;tip：如master分支合并 hot_fix分支，那么当前必须处于master分支上，然后执行 git merge hot_fix 命令&lt;/p&gt;
+&lt;p&gt;tip2：合并出现冲突&lt;/p&gt;
+&lt;p&gt;①删除git自动标记符号，如&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD、&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;等&lt;/p&gt;
+&lt;p&gt;②修改到满意后，保存退出&lt;/p&gt;
+&lt;p&gt;③git add&lt;/p&gt;
+&lt;p&gt;④git commit -m &amp;quot;日志信息&amp;quot;，此时后面不要带文件名&lt;/p&gt;
+&lt;p&gt;二、本地库跟远程库交互：&lt;/p&gt;
+&lt;p&gt;git clone &amp;lt;远程库地址&amp;gt;：克隆远程库&lt;/p&gt;
+&lt;p&gt;功能：①完整的克隆远程库为本地库，②为本地库新建origin别名，③初始化本地库&lt;/p&gt;
+&lt;p&gt;git remote -v：查看远程库地址别名&lt;/p&gt;
+&lt;p&gt;git remote add &amp;lt;别名&amp;gt; &amp;lt;远程库地址&amp;gt;：新建远程库地址别名&lt;/p&gt;
+&lt;p&gt;git remote rm &amp;lt;别名&amp;gt;：删除本地中远程库别名&lt;/p&gt;
+&lt;p&gt;git push &amp;lt;别名&amp;gt; &amp;lt;分支名&amp;gt;：本地库某个分支推送到远程库，分支必须指定&lt;/p&gt;
+&lt;p&gt;git pull &amp;lt;别名&amp;gt; &amp;lt;分支名&amp;gt;：把远程库的修改拉取到本地&lt;/p&gt;
+&lt;p&gt;tip：该命令包括git fetch，git merge&lt;/p&gt;
+&lt;p&gt;git fetch &amp;lt;远程库别名&amp;gt; &amp;lt;远程库分支名&amp;gt;：抓取远程库的指定分支到本地，但没有合并&lt;/p&gt;
+&lt;p&gt;git merge &amp;lt;远程库别名/远程库分支名&amp;gt;：将抓取下来的远程的分支，跟当前所在分支进行合并&lt;/p&gt;
+&lt;p&gt;git fork：复制远程库&lt;/p&gt;
+&lt;p&gt;tip：一般是外面团队的开发人员fork本团队项目，然后进行开发，之后外面团队发起pull request，然后本团队进行审核，如无问题本团队进行merge（合并）到团队自己的远程库，整个流程就是本团队跟外面团队的协同开发流程，Linux的团队开发成员即为这种工作方式。&lt;/p&gt;
+&lt;p&gt;三、创建git&lt;br&gt;
+git remote add origin https://github.com/zhousanfudigital_monitoring_liunx.git&lt;br&gt;
+git push origin master&lt;/p&gt;
+">Git 使用之命令行篇</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://zh-linminghao.github.io/post/about/"" data-c="
