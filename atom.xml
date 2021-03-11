@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zh-linminghao.github.io</id>
     <title>Gridea</title>
-    <updated>2021-03-10T09:42:23.690Z</updated>
+    <updated>2021-03-11T01:49:42.710Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zh-linminghao.github.io"/>
     <link rel="self" href="https://zh-linminghao.github.io/atom.xml"/>
@@ -10,6 +10,43 @@
     <logo>https://zh-linminghao.github.io/images/avatar.png</logo>
     <icon>https://zh-linminghao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[hive函数大全]]></title>
+        <id>https://zh-linminghao.github.io/post/hive-han-shu-da-quan/</id>
+        <link href="https://zh-linminghao.github.io/post/hive-han-shu-da-quan/">
+        </link>
+        <updated>2021-03-11T01:30:14.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>摘要</strong></p>
+<p>Hive内部提供了很多函数给开发者使用，包括数学函数，类型转换函数，条件函数，字符函数，聚合函数，表生成函数等等，这些函数都统称为内置函数。</p>
+<p>目录</p>
+<ul>
+<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#1">数学函数</a></strong></li>
+<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#2">集合函数</a></strong></li>
+<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#3">类型转换函数</a></strong></li>
+<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#4">日期函数</a></strong></li>
+<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#5">条件函数</a></strong></li>
+<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#6">字符函数</a></strong></li>
+<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#7">聚合函数</a></strong></li>
+<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#8">表生成函数</a></strong></li>
+</ul>
+<p><strong>数学函数</strong></p>
+<p><a href="https://www.notion.so/9ff22a57accb431289a25ca970557623">Untitled</a></p>
+<p><strong>集合函数</strong></p>
+<p><a href="https://www.notion.so/0d703e1d7a364a519c9642c71d69dc03">Untitled</a></p>
+<p><strong>类型转换函数</strong></p>
+<p><a href="https://www.notion.so/90a4f2f8e4604c67a6a5a98727b2a6e1">Untitled</a></p>
+<p><strong>日期函数</strong></p>
+<p><a href="https://www.notion.so/f92c0ea4e694487094535b7165dd5096">Untitled</a></p>
+<p><strong>条件函数</strong></p>
+<p><a href="https://www.notion.so/17f37c9bce824f05aa5e560cc2188676">Untitled</a></p>
+<p><strong>字符函数</strong></p>
+<p><a href="https://www.notion.so/fd040239e19944df8e319e07e2a458ed">Untitled</a></p>
+<p><strong>聚合函数</strong></p>
+<p><a href="https://www.notion.so/4762a0b3351a4a11ae10b2c1769edff9">Untitled</a></p>
+<p><strong>表生成函数</strong></p>
+<p><a href="https://www.notion.so/23b015e05df04c3198a00df40906e9d9">Untitled</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Gridea 上手教程]]></title>
         <id>https://zh-linminghao.github.io/post/gridea-shang-shou-jiao-cheng/</id>
