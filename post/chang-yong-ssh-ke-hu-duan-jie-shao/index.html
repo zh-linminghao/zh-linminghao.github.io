@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
-<title>hive函数大全 | Gridea</title>
+<title>常用SSH客户端介绍 | Gridea</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1615530167757">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,7 +38,7 @@
 
 
 
-  <meta name="description" content="hive函数大全" />
+  <meta name="description" content="常用SSH客户端介绍" />
   <meta name="keywords" content="" />
 </head>
 
@@ -325,8 +325,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://zh-linminghao.github.io/post/hive-han-shu-da-quan/">
-      hive函数大全
+    <a class="post-title-link" href="https://zh-linminghao.github.io/post/chang-yong-ssh-ke-hu-duan-jie-shao/">
+      常用SSH客户端介绍
     </a>
   </h1>
   <div class="post-meta">
@@ -334,52 +334,97 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-03-11 09:30:14">2021-03-11</span>
+      <span class="publish-time" data-t="2021-03-12 14:19:45">2021-03-12</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
+      <span>6<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>141<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>1444<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <p><strong>摘要</strong></p>
-<p>Hive内部提供了很多函数给开发者使用，包括数学函数，类型转换函数，条件函数，字符函数，聚合函数，表生成函数等等，这些函数都统称为内置函数。</p>
-<p>目录</p>
+              <p><strong>常用SSH客户端介绍：</strong></p>
+<p><strong>SSH</strong> 为 Secure Shell 的缩写，是目前较可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用 SSH 协议可以有效防止远程管理过程中的信息泄露问题。</p>
+<p>我们做计算的人，每天都需要与linux服务器打交道，有很多人直接使用linux系统，比如ubuntu和centos等。但是也有很多人不喜欢linux系统，虽然它对于做计算很方便，但是对于日常办公软件的支持极差，比如QQ、微信、office等。这个时候<strong>SSH客户端</strong>应运而生，它的作用就是帮助我们在windows下去连接并操作linux服务器。</p>
+<p><strong>目前网上提到的一些ssh客户端有下面这些</strong>：</p>
+<p>1、putty （0.71）</p>
+<p><a href="https://link.zhihu.com/?target=https%3A//www.putty.org">https://www.putty.org</a></p>
+<p>优缺点：完全免费，全面支持SSH1和SSH2，体积很小，操作简单，有免安装版本；缺点是不支持文件传输、图形可视化x11和多标签，且对中文支持不是很好，一般需要配合文件传输软件WinScp和FileZilla使用(见下面链接，均免费)。</p>
+<p><a href="https://link.zhihu.com/?target=https%3A//winscp.net/eng/index.php">https://winscp.net/eng/index.php</a> (WinScp)</p>
+<p><a href="https://link.zhihu.com/?target=https%3A//filezilla-project.org">https://filezilla-project.org</a> (FileZilla)</p>
+<p>2、SSH Secure Shell（3.29）</p>
+<p><a href="https://link.zhihu.com/?target=https%3A//www.wm.edu/offices/it/services/software/licensedsoftware/webeditingsftp/sshsecureshell/index.php">https://www.wm.edu/offices/it/services/software/licensedsoftware/webeditingsftp/sshsecureshell/index.php</a></p>
+<p>优缺点：免费，安装包较小，自带文件传输系统，可以很方便对文件进行编辑和复制粘贴等操作；缺点就是对中文支持不好，一般的windows默认编码为GBK，而要远程的linux的一般为utf-8编码。</p>
+<p>3、MobaXterm （11.1）</p>
+<p><a href="https://link.zhihu.com/?target=https%3A//mobaxterm.mobatek.net/">https://mobaxterm.mobatek.net/</a></p>
+<p>优缺点：功能很全，免费，有免安装版，支持多标签，同时自带文件传输系统，唯一的不足是对Z-moderm支持较差。</p>
+<p>4、Xmanager（6.0）</p>
+<p><a href="https://link.zhihu.com/?target=https%3A//www.netsarang.com/zh/xmanager/">https://www.netsarang.com/zh/xmanager/</a></p>
+<p>优缺点：界面好看，功能较全，支持多标签，有文件传输系统，对Z-moderm支持较好，缺点是属于商业软件，虽然有家庭和学校免费版，但窗口数量有限制。目前国内无法打开官网。</p>
+<p><strong>下面几款软件使用不多，不予点评。有兴趣的可以自己摸索。</strong></p>
+<p>5、Securecrt （8.5.3）</p>
+<p><a href="https://link.zhihu.com/?target=https%3A//www.vandyke.com/products/securecrt/">https://www.vandyke.com/products/securecrt/</a></p>
+<p>6、DameWare SSH Client（1.0.0）</p>
+<p><a href="https://link.zhihu.com/?target=http%3A//www.winportal.com/dameware-ssh-client">http://www.winportal.com/dameware-ssh-client</a></p>
+<p>7、Bitvise SSH Server （8.29）</p>
+<p><a href="https://link.zhihu.com/?target=https%3A//www.bitvise.com/">https://www.bitvise.com/</a></p>
+<p><a href="https://link.zhihu.com/?target=https%3A//www.putty.org">https://www.putty.org</a></p>
+<p>8、SmarTTY （3.0）</p>
+<p><a href="https://link.zhihu.com/?target=http%3A//smartty.sysprogs.com">http://smartty.sysprogs.com</a></p>
+<p><strong>以上全部软件都可以在DFT计算之家QQ群专属网盘下载：</strong></p>
+<p><a href="https://link.zhihu.com/?target=http%3A//lanzous.com/u/dft_family">http://lanzous.com/u/dft_family</a> (无需登录)</p>
+<p><strong>MobaXterm详细使用教程：</strong></p>
+<p>针对以上这几款SSH客户端软件，小编下面将<strong>重点介绍MobaXterm</strong>，MobaXterm 又名 MobaXVT，是一款增强型终端、X 服务器和 Unix 命令集(GNU/ Cygwin)工具箱。</p>
+<p>MobaXterm 可以开启多个终端视窗，以最新的 X 服务器为基础的 <a href="https://link.zhihu.com/?target=http%3A//X.Org">http://X.Org</a>，可以轻松地来试用 Unix/Linux 上的 GNU Unix 命令。这样一来，我们可以不用安装虚拟机来试用虚拟环境，然后只要通过 MobaXterm 就可以使用大多数的 linux 命令。MobaXterm 还有很强的扩展能力，可以集成插件来运行 Gcc, Perl、Curl、Tcl / Tk / Expect 等程序。</p>
+<p><strong>MobaXterm 分免费开源版和收费专业版</strong>。官网提供 MobaXterm 的免费开源版 &quot;Home Edition&quot; 下载, 免费开源版又分便捷版(解压即用)和安装版(需要一步步安装)。MobaXterm 免费版(persional)和专业版(Professional)除了 sessions 数、SSH tunnels 数和其他一些定制化配置外限制外，免费版在终端底部还多了一个 &quot;UNREGISTERED VERSION&quot; 提示。</p>
+<p><strong>MobaXterm主要功能：</strong></p>
 <ul>
-<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#1">数学函数</a></strong></li>
-<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#2">集合函数</a></strong></li>
-<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#3">类型转换函数</a></strong></li>
-<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#4">日期函数</a></strong></li>
-<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#5">条件函数</a></strong></li>
-<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#6">字符函数</a></strong></li>
-<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#7">聚合函数</a></strong></li>
-<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#8">表生成函数</a></strong></li>
+<li>支持各种连接 SSH，X11，RDP，VNC，FTP，MOSH</li>
+<li>支持 Unix 命令(bash，ls，cat，sed，grep，awk，rsync，…)</li>
+<li>连接 SSH 终端后支持 SFTP 传输文件</li>
+<li>各种丰富的插件(git/dig/aria2…)</li>
+<li>可运行 Windows 或软件</li>
 </ul>
-<p><strong>数学函数</strong></p>
-<p><a href="https://www.notion.so/9ff22a57accb431289a25ca970557623">Untitled</a></p>
-<p><strong>集合函数</strong></p>
-<p><a href="https://www.notion.so/0d703e1d7a364a519c9642c71d69dc03">Untitled</a></p>
-<p><strong>类型转换函数</strong></p>
-<p><a href="https://www.notion.so/90a4f2f8e4604c67a6a5a98727b2a6e1">Untitled</a></p>
-<p><strong>日期函数</strong></p>
-<p><a href="https://www.notion.so/f92c0ea4e694487094535b7165dd5096">Untitled</a></p>
-<p><strong>条件函数</strong></p>
-<p><a href="https://www.notion.so/17f37c9bce824f05aa5e560cc2188676">Untitled</a></p>
-<p><strong>字符函数</strong></p>
-<p><a href="https://www.notion.so/fd040239e19944df8e319e07e2a458ed">Untitled</a></p>
-<p><strong>聚合函数</strong></p>
-<p><a href="https://www.notion.so/4762a0b3351a4a11ae10b2c1769edff9">Untitled</a></p>
-<p><strong>表生成函数</strong></p>
-<p><a href="https://www.notion.so/23b015e05df04c3198a00df40906e9d9">Untitled</a></p>
+<p><strong>MobaXterm基本使用教程：</strong></p>
+<p>1、官网下载后解压文件，运行 MobaXterm_Personal_11.1.exe 即可(不详细讲述安装过程)。第一次打开会自解压，会比较慢，后续就正常了。</p>
+<figure data-type="image" tabindex="1"><img src="https://pic4.zhimg.com/80/v2-027ac9b2f2d2ef39e8ce9df3e2dc54c7_720w.jpg" alt="https://pic4.zhimg.com/80/v2-027ac9b2f2d2ef39e8ce9df3e2dc54c7_720w.jpg" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://pic3.zhimg.com/80/v2-d09c7e1a3330dee5b508dfee884648d2_720w.jpg" alt="https://pic3.zhimg.com/80/v2-d09c7e1a3330dee5b508dfee884648d2_720w.jpg" loading="lazy"></figure>
+<p>2、下面我们开始使用MobaXterm 的 SSH 连接远程服务器。首先，打开软件后，点击左上角的 Session(会话控制)，在弹出的窗口中选择 SSH，在新的窗口输入账号和密码，即可登陆主机。</p>
+<figure data-type="image" tabindex="3"><img src="https://pic4.zhimg.com/80/v2-5aa6233e210feb84035642966f61c5bb_720w.jpg" alt="https://pic4.zhimg.com/80/v2-5aa6233e210feb84035642966f61c5bb_720w.jpg" loading="lazy"></figure>
+<p>3、登陆后(登陆会提示输入密码，第一次登陆成功后会提示保存密码，一般选择同意)界面主要分两块，左边的是主机的文件，右边是终端。勾选左下角的 &quot;Follow terminal folder&quot; 可以让两个的工作路径保持一致。</p>
+<figure data-type="image" tabindex="4"><img src="https://pic4.zhimg.com/80/v2-78f034ccfe68cf0f4d96bb13ca411a0b_720w.jpg" alt="https://pic4.zhimg.com/80/v2-78f034ccfe68cf0f4d96bb13ca411a0b_720w.jpg" loading="lazy"></figure>
+<p>4、文件传输和下载，可以采用直接拖拽的方式，或者采用鼠标右键选择相应功能。</p>
+<figure data-type="image" tabindex="5"><img src="https://pic2.zhimg.com/80/v2-70186e0eac2360b34be8821ca4bdea29_720w.jpg" alt="https://pic2.zhimg.com/80/v2-70186e0eac2360b34be8821ca4bdea29_720w.jpg" loading="lazy"></figure>
+<p>5、个性化设置，设置终端字体，右键复制、文件保存路径等</p>
+<figure data-type="image" tabindex="6"><img src="https://pic4.zhimg.com/80/v2-02f2f1e929c33081fd6c9195c902b873_720w.jpg" alt="https://pic4.zhimg.com/80/v2-02f2f1e929c33081fd6c9195c902b873_720w.jpg" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://pic3.zhimg.com/80/v2-b9b46258ac6cc4a4a4e0f1e981ae62fe_720w.jpg" alt="https://pic3.zhimg.com/80/v2-b9b46258ac6cc4a4a4e0f1e981ae62fe_720w.jpg" loading="lazy"></figure>
+<p>6、特色功能，Unix 命令集(GNU/ Cygwin)工具箱功能尝试。</p>
+<p>(1) 直接命令登陆远程服务器，并且使用scp命令传输文件</p>
+<figure data-type="image" tabindex="8"><img src="https://pic4.zhimg.com/80/v2-214db198d35c31618c576af5859fa12b_720w.jpg" alt="https://pic4.zhimg.com/80/v2-214db198d35c31618c576af5859fa12b_720w.jpg" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://pic2.zhimg.com/80/v2-e8ff1c25f996d8013eea0bace933fcb5_720w.jpg" alt="https://pic2.zhimg.com/80/v2-e8ff1c25f996d8013eea0bace933fcb5_720w.jpg" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="https://pic1.zhimg.com/80/v2-d2c789a80cb912a64ac1465c305af5b0_720w.jpg" alt="https://pic1.zhimg.com/80/v2-d2c789a80cb912a64ac1465c305af5b0_720w.jpg" loading="lazy"></figure>
+<p>(2) 我们可以直接apt-get安装vim等常用功能(或者官网下载插件)，实现在windows下模拟linux环境，这样就可以使用vi命令准备INCAR文件，也可以使用Gnuplot进行绘图。</p>
+<figure data-type="image" tabindex="11"><img src="https://pic4.zhimg.com/80/v2-421cf59bfce62470254c967358f03f47_720w.jpg" alt="https://pic4.zhimg.com/80/v2-421cf59bfce62470254c967358f03f47_720w.jpg" loading="lazy"></figure>
+<figure data-type="image" tabindex="12"><img src="https://pic4.zhimg.com/80/v2-f03feb0819df6080c812e44989ab80db_720w.jpg" alt="https://pic4.zhimg.com/80/v2-f03feb0819df6080c812e44989ab80db_720w.jpg" loading="lazy"></figure>
+<figure data-type="image" tabindex="13"><img src="https://pic3.zhimg.com/80/v2-a0e9370d87811264fbfabb3e78fd0676_720w.jpg" alt="https://pic3.zhimg.com/80/v2-a0e9370d87811264fbfabb3e78fd0676_720w.jpg" loading="lazy"></figure>
+<p>(3) 通过for循环在windows下实现批量操作，以VESTA为例，首先找到在windows下解压的路径，然后设置环境变量。然后通过for循环可以批量打开POSCAR结构(注意只有关闭VESTA窗口第二个结构才会自动弹出)。</p>
+<figure data-type="image" tabindex="14"><img src="https://pic3.zhimg.com/80/v2-2add00eeb87c27ec91baca0dd8662d06_720w.png" alt="https://pic3.zhimg.com/80/v2-2add00eeb87c27ec91baca0dd8662d06_720w.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="15"><img src="https://pic4.zhimg.com/80/v2-386349d7b161d87a686452e909e582ff_720w.jpg" alt="https://pic4.zhimg.com/80/v2-386349d7b161d87a686452e909e582ff_720w.jpg" loading="lazy"></figure>
+<p><strong>参考资料：</strong></p>
+<p>1、<a href="https://link.zhihu.com/?target=https%3A//cloud.tencent.com/developer/news/244102">https://cloud.tencent.com/developer/news/244102</a></p>
+<p>2、<a href="https://link.zhihu.com/?target=https%3A//www.cnblogs.com/bamanzi/p/mobaxterm-install-cygwin-pkg.html">https://www.cnblogs.com/bamanzi/p/mobaxterm-install-cygwin-pkg.html</a></p>
+<p>3、<a href="https://link.zhihu.com/?target=http%3A//www.cnblogs.com/bamanzi/archive/2013/05/05/mobaxterm-ssh-xserver.html">http://www.cnblogs.com/bamanzi/archive/2013/05/05/mobaxterm-ssh-xserver.html</a></p>
+<p>4、<a href="https://link.zhihu.com/?target=http%3A//blog.sciencenet.cn/u/yhli0906">http://blog.sciencenet.cn/u/yhli0906</a></p>
+<p><strong><a href="https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s%3F__biz%3DMzI2OTQ4OTExOA%3D%3D%26mid%3D2247484595%26idx%3D1%26sn%3Dd7917aa01c21d1c4d692eba1538cc631%26chksm%3Deadec202dda94b141d4974883b64f1aa219c7fe75cbaa757cad77f36639e5a54db06ab5e48a3%26mpshare%3D1%26scene%3D23%26srcid%3D%23rd">MobaXterm详细使用教程系列一</a></strong></p>
+<p><strong><a href="https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s%3F__biz%3DMzI2OTQ4OTExOA%3D%3D%26mid%3D2247484596%26idx%3D1%26sn%3Dcdf8c1f357453ec76ca2e1d336de397b%26chksm%3Deadec205dda94b131c94dd63ad34cc43572892924f3101241faa460211fdb680b9ad46974fae%26xtrack%3D1%26scene%3D0%26subscene%3D131%26clicktime%3D1554806739%26ascene%3D7%26devicetype%3Dandroid-28%26version%3D2700033c%26nettype%3Dcmnet%26abtest_cookie%3DBQABAAgACgALABIAEwAGAJ2GHgAjlx4AVpkeAMSZHgDZmR4A3JkeAAAA%26lang%3Dzh_CN%26pass_ticket%3Dioup1jxMFfDbkYkeNpiHmHfMZDQ5%252FbMjUZOMQtTwUP7HK%252FHqGCKdsQTzPH7k%252FchO%26wx_header%3D1">MobaXterm详细使用教程系列二</a></strong></p>
 
             </div>
             
@@ -392,7 +437,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://zh-linminghao.github.io/post/hive-han-shu-da-quan/" title="hive函数大全">https://zh-linminghao.github.io/post/hive-han-shu-da-quan/</a>
+      <a href="https://zh-linminghao.github.io/post/chang-yong-ssh-ke-hu-duan-jie-shao/" title="常用SSH客户端介绍">https://zh-linminghao.github.io/post/chang-yong-ssh-ke-hu-duan-jie-shao/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -405,15 +450,11 @@
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="常用SSH客户端介绍" href="https://zh-linminghao.github.io/post/chang-yong-ssh-ke-hu-duan-jie-shao/">常用SSH客户端介绍</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="常用SSH客户端介绍" href="https://zh-linminghao.github.io/post/chang-yong-ssh-ke-hu-duan-jie-shao/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="Gridea 上手教程" href="https://zh-linminghao.github.io/post/gridea-shang-shou-jiao-cheng/">Gridea 上手教程</a>
-        <a class="nav-mobile-next" title="Gridea 上手教程" href="https://zh-linminghao.github.io/post/gridea-shang-shou-jiao-cheng/">下一篇</a>
+        <a class="nav-pc-next" title="hive函数大全" href="https://zh-linminghao.github.io/post/hive-han-shu-da-quan/">hive函数大全</a>
+        <a class="nav-mobile-next" title="hive函数大全" href="https://zh-linminghao.github.io/post/hive-han-shu-da-quan/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
