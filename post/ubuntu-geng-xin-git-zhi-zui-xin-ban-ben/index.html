@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
-<title>hive函数大全 | Gridea</title>
+<title>Ubuntu 更新 Git 至最新版本 | Gridea</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1616047560656">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,7 +38,7 @@
 
 
 
-  <meta name="description" content="hive函数大全" />
+  <meta name="description" content="Ubuntu 更新 Git 至最新版本" />
   <meta name="keywords" content="" />
 </head>
 
@@ -325,8 +325,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://zh-linminghao.github.io/post/hive-han-shu-da-quan/">
-      hive函数大全
+    <a class="post-title-link" href="https://zh-linminghao.github.io/post/ubuntu-geng-xin-git-zhi-zui-xin-ban-ben/">
+      Ubuntu 更新 Git 至最新版本
     </a>
   </h1>
   <div class="post-meta">
@@ -334,7 +334,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-03-11 09:30:14">2021-03-11</span>
+      <span class="publish-time" data-t="2021-03-18 14:05:42">2021-03-18</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -345,41 +345,24 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>141<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>160<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <p><strong>摘要</strong></p>
-<p>Hive内部提供了很多函数给开发者使用，包括数学函数，类型转换函数，条件函数，字符函数，聚合函数，表生成函数等等，这些函数都统称为内置函数。</p>
-<p>目录</p>
-<ul>
-<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#1">数学函数</a></strong></li>
-<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#2">集合函数</a></strong></li>
-<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#3">类型转换函数</a></strong></li>
-<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#4">日期函数</a></strong></li>
-<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#5">条件函数</a></strong></li>
-<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#6">字符函数</a></strong></li>
-<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#7">聚合函数</a></strong></li>
-<li><strong><a href="https://www.cnblogs.com/MOBIN/p/5618747.html#8">表生成函数</a></strong></li>
-</ul>
-<p><strong>数学函数</strong></p>
-<p><a href="https://www.notion.so/9ff22a57accb431289a25ca970557623">Untitled</a></p>
-<p><strong>集合函数</strong></p>
-<p><a href="https://www.notion.so/0d703e1d7a364a519c9642c71d69dc03">Untitled</a></p>
-<p><strong>类型转换函数</strong></p>
-<p><a href="https://www.notion.so/90a4f2f8e4604c67a6a5a98727b2a6e1">Untitled</a></p>
-<p><strong>日期函数</strong></p>
-<p><a href="https://www.notion.so/f92c0ea4e694487094535b7165dd5096">Untitled</a></p>
-<p><strong>条件函数</strong></p>
-<p><a href="https://www.notion.so/17f37c9bce824f05aa5e560cc2188676">Untitled</a></p>
-<p><strong>字符函数</strong></p>
-<p><a href="https://www.notion.so/fd040239e19944df8e319e07e2a458ed">Untitled</a></p>
-<p><strong>聚合函数</strong></p>
-<p><a href="https://www.notion.so/4762a0b3351a4a11ae10b2c1769edff9">Untitled</a></p>
-<p><strong>表生成函数</strong></p>
-<p><a href="https://www.notion.so/23b015e05df04c3198a00df40906e9d9">Untitled</a></p>
+              <p>大家平时可能发现，Ubuntu 自带的 Git 版本，比最新的 Git 版本都低一些，就忍不住想升级是不是。但是当你直接sudo apt-get install git时，没啥变化，无奈。</p>
+<p>这是因为 Ubuntu 自带的源中，Git 版本就是这么低，能怎么办。<br>
+所以需要加入一个源，带有最新 Git 版本的源，步骤如下：<br>
+1，添加源：</p>
+<p>sudo add-apt-repository ppa:git-core/ppa</p>
+<p>2，更新安装列表：</p>
+<p>sudo apt-get update</p>
+<p>3，升级 Git：</p>
+<p>sudo apt-get install git</p>
+<p>一气呵成，完成 Git 升级。</p>
+<p>最后，可以执行git --version验证是否升级到最新版本。</p>
+<p>谢谢。</p>
 
             </div>
             
@@ -392,7 +375,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://zh-linminghao.github.io/post/hive-han-shu-da-quan/" title="hive函数大全">https://zh-linminghao.github.io/post/hive-han-shu-da-quan/</a>
+      <a href="https://zh-linminghao.github.io/post/ubuntu-geng-xin-git-zhi-zui-xin-ban-ben/" title="Ubuntu 更新 Git 至最新版本">https://zh-linminghao.github.io/post/ubuntu-geng-xin-git-zhi-zui-xin-ban-ben/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -405,15 +388,11 @@
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="常用SSH客户端介绍" href="https://zh-linminghao.github.io/post/chang-yong-ssh-ke-hu-duan-jie-shao/">常用SSH客户端介绍</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="常用SSH客户端介绍" href="https://zh-linminghao.github.io/post/chang-yong-ssh-ke-hu-duan-jie-shao/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="Gridea 上手教程" href="https://zh-linminghao.github.io/post/gridea-shang-shou-jiao-cheng/">Gridea 上手教程</a>
-        <a class="nav-mobile-next" title="Gridea 上手教程" href="https://zh-linminghao.github.io/post/gridea-shang-shou-jiao-cheng/">下一篇</a>
+        <a class="nav-pc-next" title="常用SSH客户端介绍" href="https://zh-linminghao.github.io/post/chang-yong-ssh-ke-hu-duan-jie-shao/">常用SSH客户端介绍</a>
+        <a class="nav-mobile-next" title="常用SSH客户端介绍" href="https://zh-linminghao.github.io/post/chang-yong-ssh-ke-hu-duan-jie-shao/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
