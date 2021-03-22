@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zh-linminghao.github.io</id>
     <title>Gridea</title>
-    <updated>2021-03-18T06:06:04.043Z</updated>
+    <updated>2021-03-22T09:47:36.418Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zh-linminghao.github.io"/>
     <link rel="self" href="https://zh-linminghao.github.io/atom.xml"/>
@@ -10,6 +10,133 @@
     <logo>https://zh-linminghao.github.io/images/avatar.png</logo>
     <icon>https://zh-linminghao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[selenium启动Chrome配置参数问题]]></title>
+        <id>https://zh-linminghao.github.io/post/selenium-qi-dong-chrome-pei-zhi-can-shu-wen-ti/</id>
+        <link href="https://zh-linminghao.github.io/post/selenium-qi-dong-chrome-pei-zhi-can-shu-wen-ti/">
+        </link>
+        <updated>2021-03-22T09:45:51.000Z</updated>
+        <content type="html"><![CDATA[<p>每次当selenium启动chrome浏览器的时候，chrome浏览器很干净，没有插件、没有收藏、没有历史记录，这是因为selenium在启动chrome时为了保证最快的运行效率，启动了一个裸浏览器，这就是为什么需要配置参数的原因，但是有些时候我们需要的不仅是一个裸浏览器。</p>
+<p>selenium启动配置参数接收是ChromeOptions类，创建方式如下：</p>
+<p><code>from selenium import webdriver option = webdriver.ChromeOptions()</code></p>
+<p>创建了ChromeOptions类之后就是添加参数，添加参数有几个特定的方法，分别对应添加不同类型的配置项目。</p>
+<p>设置 chrome 二进制文件位置 (binary_location)</p>
+<p>`from selenium import webdriver<br>
+option = webdriver.ChromeOptions()</p>
+<h1 id="添加启动参数">添加启动参数</h1>
+<p>option.add_argument()</p>
+<h1 id="添加扩展应用">添加扩展应用</h1>
+<p>option.add_extension()<br>
+option.add_encoded_extension()</p>
+<h1 id="添加实验性质的设置参数">添加实验性质的设置参数</h1>
+<p>option.add_experimental_option()</p>
+<h1 id="设置调试器地址">设置调试器地址</h1>
+<p>option.debugger_address()`</p>
+<p><strong>常用配置参数：</strong></p>
+<p>`from selenium import webdriver<br>
+option = webdriver.ChromeOptions()</p>
+<h1 id="添加ua">添加UA</h1>
+<p>options.add_argument('user-agent=&quot;MQQBrowser/26 Mozilla/5.0 (Linux; U; Android 2.3.7; zh-cn; MB200 Build/GRJ22; CyanogenMod-7) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1&quot;')</p>
+<h1 id="指定浏览器分辨率">指定浏览器分辨率</h1>
+<p>options.add_argument('window-size=1920x3000')</p>
+<h1 id="谷歌文档提到需要加上这个属性来规避bug">谷歌文档提到需要加上这个属性来规避bug</h1>
+<p>chrome_options.add_argument('--disable-gpu')</p>
+<h1 id="隐藏滚动条-应对一些特殊页面">隐藏滚动条, 应对一些特殊页面</h1>
+<p>options.add_argument('--hide-scrollbars')</p>
+<h1 id="不加载图片-提升速度">不加载图片, 提升速度</h1>
+<p>options.add_argument('blink-settings=imagesEnabled=false')</p>
+<h1 id="浏览器不提供可视化页面-linux下如果系统不支持可视化不加这条会启动失败">浏览器不提供可视化页面. linux下如果系统不支持可视化不加这条会启动失败</h1>
+<p>options.add_argument('--headless')</p>
+<h1 id="以最高权限运行">以最高权限运行</h1>
+<p>options.add_argument('--no-sandbox')</p>
+<h1 id="手动指定使用的浏览器位置">手动指定使用的浏览器位置</h1>
+<p>options.binary_location = r&quot;C:\Program Files (x86)\Google\Chrome\Application\chrome.exe&quot;</p>
+<p>#添加crx插件<br>
+option.add_extension('d:\crx\AdBlock_v2.17.crx')</p>
+<h1 id="禁用javascript">禁用JavaScript</h1>
+<p>option.add_argument(&quot;--disable-javascript&quot;)</p>
+<h1 id="设置开发者模式启动该模式下webdriver属性为正常值">设置开发者模式启动，该模式下webdriver属性为正常值</h1>
+<p>options.add_experimental_option('excludeSwitches', ['enable-automation'])</p>
+<h1 id="禁用浏览器弹窗">禁用浏览器弹窗</h1>
+<p>prefs = {<br>
+'profile.default_content_setting_values' :  {<br>
+'notifications' : 2<br>
+}<br>
+}<br>
+options.add_experimental_option('prefs',prefs)</p>
+<p>driver=webdriver.Chrome(chrome_options=chrome_options)`</p>
+<p><strong>浏览器地址栏参数：</strong></p>
+<p>在浏览器地址栏输入下列命令得到相应的信息</p>
+<p>`about:version - 显示当前版本</p>
+<p>about:memory - 显示本机浏览器内存使用状况</p>
+<p>about:plugins - 显示已安装插件</p>
+<p>about:histograms - 显示历史记录</p>
+<p>about:dns - 显示DNS状态</p>
+<p>about:cache - 显示缓存页面</p>
+<p>about:gpu -是否有硬件加速</p>
+<p>chrome://extensions/ - 查看已经安装的扩展`</p>
+<figure data-type="image" tabindex="1"><img src="https://pic1.zhimg.com/80/v2-f6da4ed452d158a27204b99942a49610_720w.jpg" alt="https://pic1.zhimg.com/80/v2-f6da4ed452d158a27204b99942a49610_720w.jpg" loading="lazy"></figure>
+<p><strong>其他配置项目参数</strong></p>
+<p>`–user-data-dir=”[PATH]”</p>
+<h1 id="指定用户文件夹user-data路径可以把书签这样的用户数据保存在系统分区以外的分区">指定用户文件夹User Data路径，可以把书签这样的用户数据保存在系统分区以外的分区</h1>
+<p>–disk-cache-dir=”[PATH]“</p>
+<h1 id="指定缓存cache路径">指定缓存Cache路径</h1>
+<p>–disk-cache-size=</p>
+<h1 id="指定cache大小单位byte">指定Cache大小，单位Byte</h1>
+<p>–first run</p>
+<h1 id="重置到初始状态第一次运行">重置到初始状态，第一次运行</h1>
+<p>–incognito</p>
+<h1 id="隐身模式启动">隐身模式启动</h1>
+<p>–disable-javascript</p>
+<h1 id="禁用javascript-2">禁用Javascript</h1>
+<p>--omnibox-popup-count=&quot;num&quot;</p>
+<h1 id="将地址栏弹出的提示菜单数量改为num个">将地址栏弹出的提示菜单数量改为num个</h1>
+<p>--user-agent=&quot;xxxxxxxx&quot;</p>
+<h1 id="修改http请求头部的agent字符串可以通过aboutversion页面查看修改效果">修改HTTP请求头部的Agent字符串，可以通过about:version页面查看修改效果</h1>
+<p>--disable-plugins</p>
+<h1 id="禁止加载所有插件可以增加速度-可以通过aboutplugins页面查看效果">禁止加载所有插件，可以增加速度。可以通过about:plugins页面查看效果</h1>
+<p>--disable-javascript</p>
+<h1 id="禁用javascript如果觉得速度慢在加上这个">禁用JavaScript，如果觉得速度慢在加上这个</h1>
+<p>--disable-java</p>
+<h1 id="禁用java">禁用java</h1>
+<p>--start-maximized</p>
+<h1 id="启动就最大化">启动就最大化</h1>
+<p>--no-sandbox</p>
+<h1 id="取消沙盒模式">取消沙盒模式</h1>
+<p>--single-process</p>
+<h1 id="单进程运行">单进程运行</h1>
+<p>--process-per-tab</p>
+<h1 id="每个标签使用单独进程">每个标签使用单独进程</h1>
+<p>--process-per-site</p>
+<h1 id="每个站点使用单独进程">每个站点使用单独进程</h1>
+<p>--in-process-plugins</p>
+<h1 id="插件不启用单独进程">插件不启用单独进程</h1>
+<p>--disable-popup-blocking</p>
+<h1 id="禁用弹出拦截">禁用弹出拦截</h1>
+<p>--disable-plugins</p>
+<h1 id="禁用插件">禁用插件</h1>
+<p>--disable-images</p>
+<h1 id="禁用图像">禁用图像</h1>
+<p>--incognito</p>
+<h1 id="启动进入隐身模式">启动进入隐身模式</h1>
+<p>--enable-udd-profiles</p>
+<h1 id="启用账户切换菜单">启用账户切换菜单</h1>
+<p>--proxy-pac-url</p>
+<h1 id="使用pac代理-via-12">使用pac代理 [via 1/2]</h1>
+<p>--lang=zh-CN</p>
+<h1 id="设置语言为简体中文">设置语言为简体中文</h1>
+<p>--disk-cache-dir</p>
+<h1 id="自定义缓存目录">自定义缓存目录</h1>
+<p>--disk-cache-size</p>
+<h1 id="自定义缓存最大值单位byte">自定义缓存最大值（单位byte）</h1>
+<p>--media-cache-size</p>
+<h1 id="自定义多媒体缓存最大值单位byte">自定义多媒体缓存最大值（单位byte）</h1>
+<p>--bookmark-menu</p>
+<h1 id="在工具-栏增加一个书签按钮">在工具 栏增加一个书签按钮</h1>
+<p>--enable-sync</p>
+<h1 id="启用书签同步">启用书签同步`</h1>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Ubuntu 更新 Git 至最新版本]]></title>
         <id>https://zh-linminghao.github.io/post/ubuntu-geng-xin-git-zhi-zui-xin-ban-ben/</id>

@@ -9,7 +9,7 @@
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title>Gridea</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1616047560656">
+<link rel="shortcut icon" href="/favicon.ico?v=1616406452047">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -184,7 +184,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">6</span>
+        <span class="site-item-stat-count">7</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -245,6 +245,8 @@
   <div class="tag-cloud-list" id="tags">
     
       
+      
+        
       
         
       
@@ -1089,6 +1091,130 @@
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://zh-linminghao.github.io/post/selenium-qi-dong-chrome-pei-zhi-can-shu-wen-ti/"" data-c="
+          &lt;p&gt;每次当selenium启动chrome浏览器的时候，chrome浏览器很干净，没有插件、没有收藏、没有历史记录，这是因为selenium在启动chrome时为了保证最快的运行效率，启动了一个裸浏览器，这就是为什么需要配置参数的原因，但是有些时候我们需要的不仅是一个裸浏览器。&lt;/p&gt;
+&lt;p&gt;selenium启动配置参数接收是ChromeOptions类，创建方式如下：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;from selenium import webdriver option = webdriver.ChromeOptions()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;创建了ChromeOptions类之后就是添加参数，添加参数有几个特定的方法，分别对应添加不同类型的配置项目。&lt;/p&gt;
+&lt;p&gt;设置 chrome 二进制文件位置 (binary_location)&lt;/p&gt;
+&lt;p&gt;`from selenium import webdriver&lt;br&gt;
+option = webdriver.ChromeOptions()&lt;/p&gt;
+&lt;h1 id=&#34;添加启动参数&#34;&gt;添加启动参数&lt;/h1&gt;
+&lt;p&gt;option.add_argument()&lt;/p&gt;
+&lt;h1 id=&#34;添加扩展应用&#34;&gt;添加扩展应用&lt;/h1&gt;
+&lt;p&gt;option.add_extension()&lt;br&gt;
+option.add_encoded_extension()&lt;/p&gt;
+&lt;h1 id=&#34;添加实验性质的设置参数&#34;&gt;添加实验性质的设置参数&lt;/h1&gt;
+&lt;p&gt;option.add_experimental_option()&lt;/p&gt;
+&lt;h1 id=&#34;设置调试器地址&#34;&gt;设置调试器地址&lt;/h1&gt;
+&lt;p&gt;option.debugger_address()`&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;常用配置参数：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;`from selenium import webdriver&lt;br&gt;
+option = webdriver.ChromeOptions()&lt;/p&gt;
+&lt;h1 id=&#34;添加ua&#34;&gt;添加UA&lt;/h1&gt;
+&lt;p&gt;options.add_argument(&#39;user-agent=&amp;quot;MQQBrowser/26 Mozilla/5.0 (Linux; U; Android 2.3.7; zh-cn; MB200 Build/GRJ22; CyanogenMod-7) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1&amp;quot;&#39;)&lt;/p&gt;
+&lt;h1 id=&#34;指定浏览器分辨率&#34;&gt;指定浏览器分辨率&lt;/h1&gt;
+&lt;p&gt;options.add_argument(&#39;window-size=1920x3000&#39;)&lt;/p&gt;
+&lt;h1 id=&#34;谷歌文档提到需要加上这个属性来规避bug&#34;&gt;谷歌文档提到需要加上这个属性来规避bug&lt;/h1&gt;
+&lt;p&gt;chrome_options.add_argument(&#39;--disable-gpu&#39;)&lt;/p&gt;
+&lt;h1 id=&#34;隐藏滚动条-应对一些特殊页面&#34;&gt;隐藏滚动条, 应对一些特殊页面&lt;/h1&gt;
+&lt;p&gt;options.add_argument(&#39;--hide-scrollbars&#39;)&lt;/p&gt;
+&lt;h1 id=&#34;不加载图片-提升速度&#34;&gt;不加载图片, 提升速度&lt;/h1&gt;
+&lt;p&gt;options.add_argument(&#39;blink-settings=imagesEnabled=false&#39;)&lt;/p&gt;
+&lt;h1 id=&#34;浏览器不提供可视化页面-linux下如果系统不支持可视化不加这条会启动失败&#34;&gt;浏览器不提供可视化页面. linux下如果系统不支持可视化不加这条会启动失败&lt;/h1&gt;
+&lt;p&gt;options.add_argument(&#39;--headless&#39;)&lt;/p&gt;
+&lt;h1 id=&#34;以最高权限运行&#34;&gt;以最高权限运行&lt;/h1&gt;
+&lt;p&gt;options.add_argument(&#39;--no-sandbox&#39;)&lt;/p&gt;
+&lt;h1 id=&#34;手动指定使用的浏览器位置&#34;&gt;手动指定使用的浏览器位置&lt;/h1&gt;
+&lt;p&gt;options.binary_location = r&amp;quot;C:\Program Files (x86)\Google\Chrome\Application\chrome.exe&amp;quot;&lt;/p&gt;
+&lt;p&gt;#添加crx插件&lt;br&gt;
+option.add_extension(&#39;d:\crx\AdBlock_v2.17.crx&#39;)&lt;/p&gt;
+&lt;h1 id=&#34;禁用javascript&#34;&gt;禁用JavaScript&lt;/h1&gt;
+&lt;p&gt;option.add_argument(&amp;quot;--disable-javascript&amp;quot;)&lt;/p&gt;
+&lt;h1 id=&#34;设置开发者模式启动该模式下webdriver属性为正常值&#34;&gt;设置开发者模式启动，该模式下webdriver属性为正常值&lt;/h1&gt;
+&lt;p&gt;options.add_experimental_option(&#39;excludeSwitches&#39;, [&#39;enable-automation&#39;])&lt;/p&gt;
+&lt;h1 id=&#34;禁用浏览器弹窗&#34;&gt;禁用浏览器弹窗&lt;/h1&gt;
+&lt;p&gt;prefs = {&lt;br&gt;
+&#39;profile.default_content_setting_values&#39; :  {&lt;br&gt;
+&#39;notifications&#39; : 2&lt;br&gt;
+}&lt;br&gt;
+}&lt;br&gt;
+options.add_experimental_option(&#39;prefs&#39;,prefs)&lt;/p&gt;
+&lt;p&gt;driver=webdriver.Chrome(chrome_options=chrome_options)`&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;浏览器地址栏参数：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在浏览器地址栏输入下列命令得到相应的信息&lt;/p&gt;
+&lt;p&gt;`about:version - 显示当前版本&lt;/p&gt;
+&lt;p&gt;about:memory - 显示本机浏览器内存使用状况&lt;/p&gt;
+&lt;p&gt;about:plugins - 显示已安装插件&lt;/p&gt;
+&lt;p&gt;about:histograms - 显示历史记录&lt;/p&gt;
+&lt;p&gt;about:dns - 显示DNS状态&lt;/p&gt;
+&lt;p&gt;about:cache - 显示缓存页面&lt;/p&gt;
+&lt;p&gt;about:gpu -是否有硬件加速&lt;/p&gt;
+&lt;p&gt;chrome://extensions/ - 查看已经安装的扩展`&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://pic1.zhimg.com/80/v2-f6da4ed452d158a27204b99942a49610_720w.jpg&#34; alt=&#34;https://pic1.zhimg.com/80/v2-f6da4ed452d158a27204b99942a49610_720w.jpg&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;其他配置项目参数&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;`–user-data-dir=”[PATH]”&lt;/p&gt;
+&lt;h1 id=&#34;指定用户文件夹user-data路径可以把书签这样的用户数据保存在系统分区以外的分区&#34;&gt;指定用户文件夹User Data路径，可以把书签这样的用户数据保存在系统分区以外的分区&lt;/h1&gt;
+&lt;p&gt;–disk-cache-dir=”[PATH]“&lt;/p&gt;
+&lt;h1 id=&#34;指定缓存cache路径&#34;&gt;指定缓存Cache路径&lt;/h1&gt;
+&lt;p&gt;–disk-cache-size=&lt;/p&gt;
+&lt;h1 id=&#34;指定cache大小单位byte&#34;&gt;指定Cache大小，单位Byte&lt;/h1&gt;
+&lt;p&gt;–first run&lt;/p&gt;
+&lt;h1 id=&#34;重置到初始状态第一次运行&#34;&gt;重置到初始状态，第一次运行&lt;/h1&gt;
+&lt;p&gt;–incognito&lt;/p&gt;
+&lt;h1 id=&#34;隐身模式启动&#34;&gt;隐身模式启动&lt;/h1&gt;
+&lt;p&gt;–disable-javascript&lt;/p&gt;
+&lt;h1 id=&#34;禁用javascript-2&#34;&gt;禁用Javascript&lt;/h1&gt;
+&lt;p&gt;--omnibox-popup-count=&amp;quot;num&amp;quot;&lt;/p&gt;
+&lt;h1 id=&#34;将地址栏弹出的提示菜单数量改为num个&#34;&gt;将地址栏弹出的提示菜单数量改为num个&lt;/h1&gt;
+&lt;p&gt;--user-agent=&amp;quot;xxxxxxxx&amp;quot;&lt;/p&gt;
+&lt;h1 id=&#34;修改http请求头部的agent字符串可以通过aboutversion页面查看修改效果&#34;&gt;修改HTTP请求头部的Agent字符串，可以通过about:version页面查看修改效果&lt;/h1&gt;
+&lt;p&gt;--disable-plugins&lt;/p&gt;
+&lt;h1 id=&#34;禁止加载所有插件可以增加速度-可以通过aboutplugins页面查看效果&#34;&gt;禁止加载所有插件，可以增加速度。可以通过about:plugins页面查看效果&lt;/h1&gt;
+&lt;p&gt;--disable-javascript&lt;/p&gt;
+&lt;h1 id=&#34;禁用javascript如果觉得速度慢在加上这个&#34;&gt;禁用JavaScript，如果觉得速度慢在加上这个&lt;/h1&gt;
+&lt;p&gt;--disable-java&lt;/p&gt;
+&lt;h1 id=&#34;禁用java&#34;&gt;禁用java&lt;/h1&gt;
+&lt;p&gt;--start-maximized&lt;/p&gt;
+&lt;h1 id=&#34;启动就最大化&#34;&gt;启动就最大化&lt;/h1&gt;
+&lt;p&gt;--no-sandbox&lt;/p&gt;
+&lt;h1 id=&#34;取消沙盒模式&#34;&gt;取消沙盒模式&lt;/h1&gt;
+&lt;p&gt;--single-process&lt;/p&gt;
+&lt;h1 id=&#34;单进程运行&#34;&gt;单进程运行&lt;/h1&gt;
+&lt;p&gt;--process-per-tab&lt;/p&gt;
+&lt;h1 id=&#34;每个标签使用单独进程&#34;&gt;每个标签使用单独进程&lt;/h1&gt;
+&lt;p&gt;--process-per-site&lt;/p&gt;
+&lt;h1 id=&#34;每个站点使用单独进程&#34;&gt;每个站点使用单独进程&lt;/h1&gt;
+&lt;p&gt;--in-process-plugins&lt;/p&gt;
+&lt;h1 id=&#34;插件不启用单独进程&#34;&gt;插件不启用单独进程&lt;/h1&gt;
+&lt;p&gt;--disable-popup-blocking&lt;/p&gt;
+&lt;h1 id=&#34;禁用弹出拦截&#34;&gt;禁用弹出拦截&lt;/h1&gt;
+&lt;p&gt;--disable-plugins&lt;/p&gt;
+&lt;h1 id=&#34;禁用插件&#34;&gt;禁用插件&lt;/h1&gt;
+&lt;p&gt;--disable-images&lt;/p&gt;
+&lt;h1 id=&#34;禁用图像&#34;&gt;禁用图像&lt;/h1&gt;
+&lt;p&gt;--incognito&lt;/p&gt;
+&lt;h1 id=&#34;启动进入隐身模式&#34;&gt;启动进入隐身模式&lt;/h1&gt;
+&lt;p&gt;--enable-udd-profiles&lt;/p&gt;
+&lt;h1 id=&#34;启用账户切换菜单&#34;&gt;启用账户切换菜单&lt;/h1&gt;
+&lt;p&gt;--proxy-pac-url&lt;/p&gt;
+&lt;h1 id=&#34;使用pac代理-via-12&#34;&gt;使用pac代理 [via 1/2]&lt;/h1&gt;
+&lt;p&gt;--lang=zh-CN&lt;/p&gt;
+&lt;h1 id=&#34;设置语言为简体中文&#34;&gt;设置语言为简体中文&lt;/h1&gt;
+&lt;p&gt;--disk-cache-dir&lt;/p&gt;
+&lt;h1 id=&#34;自定义缓存目录&#34;&gt;自定义缓存目录&lt;/h1&gt;
+&lt;p&gt;--disk-cache-size&lt;/p&gt;
+&lt;h1 id=&#34;自定义缓存最大值单位byte&#34;&gt;自定义缓存最大值（单位byte）&lt;/h1&gt;
+&lt;p&gt;--media-cache-size&lt;/p&gt;
+&lt;h1 id=&#34;自定义多媒体缓存最大值单位byte&#34;&gt;自定义多媒体缓存最大值（单位byte）&lt;/h1&gt;
+&lt;p&gt;--bookmark-menu&lt;/p&gt;
+&lt;h1 id=&#34;在工具-栏增加一个书签按钮&#34;&gt;在工具 栏增加一个书签按钮&lt;/h1&gt;
+&lt;p&gt;--enable-sync&lt;/p&gt;
+&lt;h1 id=&#34;启用书签同步&#34;&gt;启用书签同步`&lt;/h1&gt;
+">selenium启动Chrome配置参数问题</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://zh-linminghao.github.io/post/ubuntu-geng-xin-git-zhi-zui-xin-ban-ben/"" data-c="
