@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zh-linminghao.github.io</id>
     <title>Gridea</title>
-    <updated>2021-07-07T05:43:28.107Z</updated>
+    <updated>2021-07-08T06:57:56.993Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zh-linminghao.github.io"/>
     <link rel="self" href="https://zh-linminghao.github.io/atom.xml"/>
@@ -376,92 +376,6 @@ options.add_experimental_option('prefs',prefs)</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Gridea 上手教程]]></title>
-        <id>https://zh-linminghao.github.io/post/gridea-shang-shou-jiao-cheng/</id>
-        <link href="https://zh-linminghao.github.io/post/gridea-shang-shou-jiao-cheng/">
-        </link>
-        <updated>2021-03-10T09:34:02.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="gridea-上手教程小白也可以用的-github-pages-搭建工具"><strong>Gridea 上手教程——小白也可以用的 GitHub Pages 搭建工具</strong></h3>
-<figure data-type="image" tabindex="1"><img src="https://pic2.zhimg.com/v2-ccc4b87bd61592a39c931b9057638db9_xs.jpg?source=172ae18b" alt="https://pic2.zhimg.com/v2-ccc4b87bd61592a39c931b9057638db9_xs.jpg?source=172ae18b" loading="lazy"></figure>
-<p>最近为了分享自己的学习心得，开始利用 GitHub Pages 搭建个人博客。但是水平实在太 ，所以没有选择主流的hexo，而是使用Gridea。初始配置简单，后续维护更是简单。对于我这种又懒又 的人来说再合适不过了。今天就总结出文章分享给大家。</p>
-<h2 id="本地软件安装"><strong>本地软件安装</strong></h2>
-<h2 id="git-安装"><strong>Git 安装</strong></h2>
-<p>Gridea 的同步功能依赖本地 Git 客户端，所以我们需要先安装 Git。 <a href="https://zhuanlan.zhihu.com/p/71681116/Git">Git官网</a>下载平台对应的安装程序。安装没有特别的要求，一路下一步即可。</p>
-<h2 id="gridea-安装"><strong>Gridea 安装</strong></h2>
-<p><a href="https://link.zhihu.com/?target=https%3A//gridea.dev/">Gridea官网</a>下载对应平台的安装程序进行安装。</p>
-<h2 id="初始配置"><strong>初始配置</strong></h2>
-<h2 id="github-pages-创建"><strong>GitHub Pages 创建</strong></h2>
-<h3 id="仓库创建"><strong>仓库创建</strong></h3>
-<p>首先，需要创建一个仓库，建议仓库为 <strong><a href="https://link.zhihu.com/?target=http%3A//username.github.io">http://username.github.io</a></strong>。根据<a href="https://zhuanlan.zhihu.com/p/71681116/GitHub%20%E5%B8%AE%E5%8A%A9">官方文档</a>， GitHub 会默认将名称符合要求的仓库设置成 GitHub Pages 可访问类型。例如我的用户名是 <strong>yym0924</strong>，所以仓库名就是<a href="https://link.zhihu.com/?target=http%3A//yym0924.github.io">http://yym0924.github.io</a>。不过我创建仓库的时候并未自动启用 GitHub Pages，遇到这种情况手动开启即可。</p>
-<h3 id="基本设置"><strong>基本设置</strong></h3>
-<h3 id="开通-github-pages"><strong>开通 GitHub Pages</strong></h3>
-<p>这里也说明下手动启用 GitHub Pages 的方式。</p>
-<figure data-type="image" tabindex="2"><img src="https://pic2.zhimg.com/80/v2-5a100d2a9d1dc4ff2772816513f2bcd1_720w.jpg" alt="https://pic2.zhimg.com/80/v2-5a100d2a9d1dc4ff2772816513f2bcd1_720w.jpg" loading="lazy"></figure>
-<p>打开仓库的 <strong>Settings</strong></p>
-<figure data-type="image" tabindex="3"><img src="https://pic3.zhimg.com/80/v2-cd0c03f3a17fa069860628a69cf685d2_720w.jpg" alt="https://pic3.zhimg.com/80/v2-cd0c03f3a17fa069860628a69cf685d2_720w.jpg" loading="lazy"></figure>
-<p>找到 <strong>GitHub Pages</strong> 设置的地方 点击 <strong>Choose a theme</strong> 随意选择一个主题。因为后续我们使用 Gridea 设置主题，这边选择主题只是为了开启 GitHub Pages 可访问类型。</p>
-<h3 id="创建新-token"><strong>创建新 token</strong></h3>
-<p>Gridea 管理 GitHub Pages 需要 token。登录 GitHub 后点击<a href="https://link.zhihu.com/?target=https%3A//github.com/settings/tokens/new">这里</a> 创建一个新的 token。</p>
-<figure data-type="image" tabindex="4"><img src="https://pic2.zhimg.com/80/v2-8f670c3e42766c528d61b5644863bb15_720w.jpg" alt="https://pic2.zhimg.com/80/v2-8f670c3e42766c528d61b5644863bb15_720w.jpg" loading="lazy"></figure>
-<p>勾选上 <strong>repo</strong> 相关权限即可。</p>
-<figure data-type="image" tabindex="5"><img src="https://pic3.zhimg.com/80/v2-a2e0c94166b0748b5c45915f82823486_720w.jpg" alt="https://pic3.zhimg.com/80/v2-a2e0c94166b0748b5c45915f82823486_720w.jpg" loading="lazy"></figure>
-<p>请把新建的 token 复制一个地方保存起来，因为关闭这个网页后你就再也看不到它了。</p>
-<h2 id="gridea-初始配置"><strong>Gridea 初始配置</strong></h2>
-<figure data-type="image" tabindex="6"><img src="https://pic4.zhimg.com/80/v2-0d949c6f25edd05184dad384f4b95a9f_720w.jpg" alt="https://pic4.zhimg.com/80/v2-0d949c6f25edd05184dad384f4b95a9f_720w.jpg" loading="lazy"></figure>
-<p>做好基本设置并保存。这步设置好后就可以开始使用。你可以点击客户端左下角的<strong>预览</strong>按钮来查看本地渲染效果，或者点击<strong>同步</strong>进行博客最新内容的部署。</p>
-<h3 id="开启文章评论"><strong>开启文章评论</strong></h3>
-<p>Gridea 支持 <a href="https://zhuanlan.zhihu.com/p/71681116/gitalk/gitalk">Gitalk</a> 和 Disqus 两种评论系统，这里我使用 Gitalk 评论系统。</p>
-<blockquote>
-<p>Gitalk 是一个基于 GitHub Issue 和 Preact 开发的评论插件。</p>
-</blockquote>
-<p>首先你需要有一个 <strong>GitHub OAuth Applicatio</strong> ，点击<a href="https://link.zhihu.com/?target=https%3A//github.com/settings/applications/new">这里</a>创建。</p>
-<figure data-type="image" tabindex="7"><img src="https://pic3.zhimg.com/80/v2-a1b9f89f2315dd658618575760a4af2a_720w.jpg" alt="https://pic3.zhimg.com/80/v2-a1b9f89f2315dd658618575760a4af2a_720w.jpg" loading="lazy"></figure>
-<figure data-type="image" tabindex="8"><img src="https://pic1.zhimg.com/80/v2-48f38ade5d85238c131f9e39b70c5e2c_720w.jpg" alt="https://pic1.zhimg.com/80/v2-48f38ade5d85238c131f9e39b70c5e2c_720w.jpg" loading="lazy"></figure>
-<p>创建完成后可将 <strong>Client ID</strong> 和 <strong>Client Secret</strong> 复制保存到本地。</p>
-<figure data-type="image" tabindex="9"><img src="https://pic3.zhimg.com/80/v2-ca23eecd67cc0d4e314e79ed7eda6a8a_720w.jpg" alt="https://pic3.zhimg.com/80/v2-ca23eecd67cc0d4e314e79ed7eda6a8a_720w.jpg" loading="lazy"></figure>
-<p>设置、保存并同步后评论模块就可用了。</p>
-<figure data-type="image" tabindex="10"><img src="https://pic4.zhimg.com/80/v2-9173fb2312681f4fa9b4092f24eb97db_720w.jpg" alt="https://pic4.zhimg.com/80/v2-9173fb2312681f4fa9b4092f24eb97db_720w.jpg" loading="lazy"></figure>
-<p>首次使用时可能出现上图情况，使用 GitHub 登录一次即可。</p>
-<h3 id="favicon-和头像设置"><strong>FAVICON 和头像设置</strong></h3>
-<figure data-type="image" tabindex="11"><img src="https://pic3.zhimg.com/80/v2-f259bbb49e345b4006ea6b45750037c2_720w.jpg" alt="https://pic3.zhimg.com/80/v2-f259bbb49e345b4006ea6b45750037c2_720w.jpg" loading="lazy"></figure>
-<p>FAVICON 就是网页标题左侧的小图标</p>
-<figure data-type="image" tabindex="12"><img src="https://pic2.zhimg.com/80/v2-44ee528d75936f6fc4069f927385e395_720w.jpg" alt="https://pic2.zhimg.com/80/v2-44ee528d75936f6fc4069f927385e395_720w.jpg" loading="lazy"></figure>
-<p>头像</p>
-<p>其实这两个不属于初始设置，但是默认使用的是 Gridea 的图标，在你自己的博客里还是很违和的。</p>
-<figure data-type="image" tabindex="13"><img src="https://pic4.zhimg.com/80/v2-e6bad64b93907820631fddb410f0176b_720w.jpg" alt="https://pic4.zhimg.com/80/v2-e6bad64b93907820631fddb410f0176b_720w.jpg" loading="lazy"></figure>
-<figure data-type="image" tabindex="14"><img src="https://pic2.zhimg.com/80/v2-5214370eb1cfccae7a16d51161c8f8c5_720w.jpg" alt="https://pic2.zhimg.com/80/v2-5214370eb1cfccae7a16d51161c8f8c5_720w.jpg" loading="lazy"></figure>
-<h3 id="主题设置"><strong>主题设置</strong></h3>
-<figure data-type="image" tabindex="15"><img src="https://pic3.zhimg.com/80/v2-eadbd0870afb9329d80a6fd221582a06_720w.jpg" alt="https://pic3.zhimg.com/80/v2-eadbd0870afb9329d80a6fd221582a06_720w.jpg" loading="lazy"></figure>
-<p>基础设置</p>
-<figure data-type="image" tabindex="16"><img src="https://pic2.zhimg.com/80/v2-ad023a5557fd02ce5f54bf5aa873be45_720w.jpg" alt="https://pic2.zhimg.com/80/v2-ad023a5557fd02ce5f54bf5aa873be45_720w.jpg" loading="lazy"></figure>
-<p>自定义设置，自由度很大，这里大部分人设置下想要公开的社交网站主页即可。设置后会小图标的形式显示在网页左下角。</p>
-<h3 id="菜单设置"><strong>菜单设置</strong></h3>
-<p>我搭建博客的时候遇到菜单里的<strong>关于</strong>选项链接是 <strong>/about/</strong>，并不能链接自带<strong>关于</strong>文章。所以需要进行修改为 <strong>/post/about/</strong>，你也可以把<strong>关注</strong>选项链接到其他自己新建的文章。</p>
-<figure data-type="image" tabindex="17"><img src="https://pic1.zhimg.com/80/v2-6e9a331027f20c5adb919c2b4880d270_720w.jpg" alt="https://pic1.zhimg.com/80/v2-6e9a331027f20c5adb919c2b4880d270_720w.jpg" loading="lazy"></figure>
-<figure data-type="image" tabindex="18"><img src="https://pic4.zhimg.com/80/v2-70f23775d92fdba09ee696714789ab47_720w.jpg" alt="https://pic4.zhimg.com/80/v2-70f23775d92fdba09ee696714789ab47_720w.jpg" loading="lazy"></figure>
-<p>点击对应菜单名称即可进入设置</p>
-<h2 id="维护-github-pages"><strong>维护 GitHub Pages</strong></h2>
-<h2 id="设置标签"><strong>设置标签</strong></h2>
-<p>标签并非必须，但是对于管理和访问而言都能提高效率。</p>
-<figure data-type="image" tabindex="19"><img src="https://pic3.zhimg.com/80/v2-7aaecc08f4a1b91e1e5a639cdcf27f7a_720w.jpg" alt="https://pic3.zhimg.com/80/v2-7aaecc08f4a1b91e1e5a639cdcf27f7a_720w.jpg" loading="lazy"></figure>
-<figure data-type="image" tabindex="20"><img src="https://pic4.zhimg.com/80/v2-70f23775d92fdba09ee696714789ab47_720w.jpg" alt="https://pic4.zhimg.com/80/v2-70f23775d92fdba09ee696714789ab47_720w.jpg" loading="lazy"></figure>
-<h2 id="新建文章"><strong>新建文章</strong></h2>
-<figure data-type="image" tabindex="21"><img src="https://pic4.zhimg.com/80/v2-de467be4d86964983256aef7cf0c8fa3_720w.jpg" alt="https://pic4.zhimg.com/80/v2-de467be4d86964983256aef7cf0c8fa3_720w.jpg" loading="lazy"></figure>
-<figure data-type="image" tabindex="22"><img src="https://pic2.zhimg.com/80/v2-6f878908d5fd62fda9d14a6130b0d399_720w.jpg" alt="https://pic2.zhimg.com/80/v2-6f878908d5fd62fda9d14a6130b0d399_720w.jpg" loading="lazy"></figure>
-<p>在文章管理界面点击<strong>新建文章</strong>。GitHub Pages 使用 Markdown 编写文章，同时 Gridea 的文章编辑器提供了一些基本样式，点击按钮既可以添加对应标记，方便初学者使用。不过这里还是建议大家抽空学习一下 Markdown，很简单。</p>
-<p>**<a href="https://link.zhihu.com/?target=https%3A//fehey.com/post/markdown-yu-fa-jian-dan-jiao-cheng">Markdown 语法简单教程 | 海岛心hey**fehey.com</a></p>
-<figure data-type="image" tabindex="23"><img src="https://pic3.zhimg.com/v2-e45a8ce9ca5557261cf89dd245d880b6_ipico.jpg" alt="https://pic3.zhimg.com/v2-e45a8ce9ca5557261cf89dd245d880b6_ipico.jpg" loading="lazy"></figure>
-<p>编辑区的右侧可以设置 <strong>URL</strong>、<strong>标签</strong>、<strong>创建时间</strong>、<strong>封面图</strong>和<strong>列表中隐藏</strong>。</p>
-<p>这篇文章的 <strong>URL</strong> 为 <strong>gridea-shang-shou-jiao-cheng</strong>，那么他的文章完整链接就是</p>
-<p><code>https://yym0924.github.io/post/gridea-shang-shou-jiao-cheng/</code></p>
-<p><strong>标签</strong>可以选择已有的标签，如果需要新标签请先回到主界面添加，再在文章编辑界面选择。</p>
-<p><strong>创建时间</strong>会自动生成，也可以修改。</p>
-<p><strong>封面图</strong>会显示在首页和其他文章列表（可设置隐藏）。</p>
-<p><strong>列表中隐藏</strong>可以用于暂未编辑好的文章，或者不希望它显示于各种列表中而只能通过链接访问，比如<strong>关于</strong>页面。</p>
-<p>文章列表默认会显示摘要，在文章头部插入 ，在其上方写摘要的内容即可。</p>
-]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Git 使用之命令行篇]]></title>
         <id>https://zh-linminghao.github.io/post/git-shi-yong-zhi-ming-ling-xing-pian/</id>
         <link href="https://zh-linminghao.github.io/post/git-shi-yong-zhi-ming-ling-xing-pian/">
@@ -525,38 +439,6 @@ options.add_experimental_option('prefs',prefs)</p>
 <p>三、创建git<br>
 git remote add origin https://github.com/zhousanfudigital_monitoring_liunx.git<br>
 git push origin master</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://zh-linminghao.github.io/post/hello-gridea/</id>
-        <link href="https://zh-linminghao.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>
