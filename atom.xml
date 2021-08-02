@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zh-linminghao.github.io</id>
     <title>Gridea</title>
-    <updated>2021-08-02T14:32:53.561Z</updated>
+    <updated>2021-08-02T14:34:24.843Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zh-linminghao.github.io"/>
     <link rel="self" href="https://zh-linminghao.github.io/atom.xml"/>
@@ -49,7 +49,6 @@
 </ul>
 <hr>
 <h1 id="项目经历"><strong>项目经历</strong></h1>
-<h3 id="20201-20215">2020.1-2021.5</h3>
 <h3 id="数据团队搭建项目">数据团队搭建项目</h3>
 <ul>
 <li>在佛山分公司搭建数据中台团队，为审核、算法和区域团队提供数据报表、自动邮件、数据查询和分析、数据表现持续跟踪反馈，快速定位问题并调整方向，获公司级年度“数据中台项目组”优秀团队奖（获批项目奖）；</li>
@@ -78,7 +77,6 @@
 <ul>
 <li>补充现有敏感词系统功能，通过组合词（含正则、关键词和拼音）来确定语境模糊的违规语句，支持运营定制更灵活违规词，提高审核系统违规准确率，为涉及用户隐私内容违规性的检测提供可执行基础条件（获批项目奖）；</li>
 </ul>
-<h3 id="20191-201912">2019.1-2019.12</h3>
 <h3 id="文字违规打击">文字违规打击</h3>
 <ul>
 <li>带领文字风控团队，致力打击平台全产品黑产、盗号、色情、广告等违规信息，降低文字违规曝光的风险性，降低业务风险， 从而提高用户体验，提升产品安全性，获公司级年度“优秀员工”奖；</li>
